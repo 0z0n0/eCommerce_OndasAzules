@@ -1,0 +1,27 @@
+/*#7D1E6A Título
+  #EEB0B0 Destaques 2  
+  #FFE59D Destaques 1  
+  #BDE6F1 background   */
+.Contenedor{
+    background-color: #EEB0B0;
+    margin: 20px;
+    border-radius: 25px;    
+}
+  .Header {
+    display: flex;
+    justify-content: center
+    
+}  
+  .container {
+    padding: 2px 16px;
+  }
+.informacion{
+    font-size: 12px;
+    display: flex;    
+    flex-direction: column;
+}
+
+
+
+
+

@@ -1,0 +1,11 @@
+/*#7D1E6A Título
+  #EEB0B0 Destaques 2  
+  #FFE59D Destaques 1  
+  #BDE6F1 background   */
+
+.ListGroup {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #7D1E6A;
+}
