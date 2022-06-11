@@ -4,7 +4,7 @@ const products = [
         name: 'Alisha', 
         price: 1000, 
         category: 'colgantes', 
-        img:'../../public/assets/img/colgantes/colgante1.jpg', 
+        img:'../../assets/img/colgantes/colgante7.jpg', 
         stock: 25, 
         description:'Mandala colgante, hecha en vidrio'
     },
@@ -13,7 +13,7 @@ const products = [
         name: 'Kalinda', 
         price: 1000, 
         category: 'colgantes', 
-        img:'https://picsum.photos/200/301', 
+        img:'../../assets/img/colgantes/colgante2.jpg', 
         stock: 25, 
         description:'Mandala colgante, hecha en vidrio'
     },
@@ -22,7 +22,7 @@ const products = [
         name: 'Darsha', 
         price: 1500, 
         category: 'colgantes', 
-        img:'https://picsum.photos/201/300', 
+        img:'../../assets/img/colgantes/colgante3.jpg', 
         stock: 10, 
         description:'Mandala colgante, hecha en vidrio'
     },
@@ -31,7 +31,7 @@ const products = [
         name: 'Indira', 
         price: 1300, 
         category: 'colgantes', 
-        img:'../assets/img/colgantes/colgante4.jpg', 
+        img:'../../assets/img/colgantes/colgante4.jpg', 
         stock: 25, 
         description:'Mandala colgante, hecha en vidrio'
     },
@@ -40,7 +40,7 @@ const products = [
         name: 'Trisha', 
         price: 1000, 
         category: 'colgantes', 
-        img:'https://picsum.photos/200/300', 
+        img:'../../assets/img/colgantes/colgante5.jpg', 
         stock: 25, 
         description:'Mandala colgante, hecha en vidrio'
     },
@@ -49,7 +49,7 @@ const products = [
         name: 'Kilanda', 
         price: 1100, 
         category: 'colgantes', 
-        img:'https://picsum.photos/200/301', 
+        img:'../../assets/img/colgantes/colgante6.jpg', 
         stock: 25, 
         description:'Mandala colgante, hecha en vidrio'
     }
@@ -61,6 +61,14 @@ export const getProducts = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(products)
-        }, 2000)
+        }, 500)
+    })
+}
+
+export const getProductById = (id) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === id))
+        }, 500)
     })
 }
