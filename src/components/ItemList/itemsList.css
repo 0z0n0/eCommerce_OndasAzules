@@ -3,9 +3,14 @@
   #FFE59D Destaques 1  
   #BDE6F1 background   */
 
-.ListGroup {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: #7D1E6A;
+  .row{
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    background-color: black;
 }
+/* .column{
+    flex: 25%;
+    padding: 5px;
+    border-color: blue;
+} */

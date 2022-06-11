@@ -1,8 +1,8 @@
 import './item.css'
 const Item = ({ id, name, img, price, description }) => {
     return (
-        <div >
-            <div className="Contenedor">
+        
+            <div className="ContenedorHijo">
                 <h1 className="Header">{name}</h1>
                 <section className="img">
                     <img src={img} alt={name}/>
@@ -17,7 +17,7 @@ const Item = ({ id, name, img, price, description }) => {
                 </div>
                 
             </div>
-        </div>
+        
 
         
     )
