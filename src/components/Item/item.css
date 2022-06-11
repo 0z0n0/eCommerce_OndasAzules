@@ -2,15 +2,19 @@
   #EEB0B0 Destaques 2  
   #FFE59D Destaques 1  
   #BDE6F1 background   */
-.Contenedor{
+  .ContenedorHijo{
+    /* width: 100%; */
     background-color: #EEB0B0;
     margin: 20px;
-    border-radius: 25px;    
+    border-radius: 25px;  
+    flex: 25%;
+    padding: 5px;
+    border-color: blue;  
+    
 }
   .Header {
     display: flex;
-    justify-content: center
-    
+    justify-content: center;   
 }  
   .container {
     padding: 2px 16px;
@@ -19,6 +23,10 @@
     font-size: 12px;
     display: flex;    
     flex-direction: column;
+}
+
+img{
+  width: 200px;
 }
 
 

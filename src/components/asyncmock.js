@@ -1,12 +1,10 @@
-const products = [
-    //Consulta: No puedo mostrar las imagenes almacenadas de forma local
-    // en el render,¿Cómo se hace?
+const products = [    
     { 
         id: '1', 
         name: 'Alisha', 
         price: 1000, 
         category: 'colgantes', 
-        img:'https://picsum.photos/200/300', 
+        img:'../../public/assets/img/colgantes/colgante1.jpg', 
         stock: 25, 
         description:'Mandala colgante, hecha en vidrio'
     },
@@ -28,7 +26,7 @@ const products = [
         stock: 10, 
         description:'Mandala colgante, hecha en vidrio'
     },
-    /* { 
+    { 
         id: '4', 
         name: 'Indira', 
         price: 1300, 
@@ -36,7 +34,7 @@ const products = [
         img:'../assets/img/colgantes/colgante4.jpg', 
         stock: 25, 
         description:'Mandala colgante, hecha en vidrio'
-    }, */
+    },
     { 
         id: '5', 
         name: 'Trisha', 
