@@ -2,31 +2,52 @@
   #EEB0B0 Destaques 2  
   #FFE59D Destaques 1  
   #BDE6F1 background   */
-  .ContenedorHijo{
-    /* width: 100%; */
+  .ContenedorHijo{    
     background-color: #EEB0B0;
-    margin: 20px;
-    border-radius: 25px;  
+    margin: 2rem;
+    border-radius: 2.5rem;  
     flex: 25%;
-    padding: 5px;
-    border-color: blue;  
+    padding: 2rem;     
     
 }
   .Header {
     display: flex;
     justify-content: center;   
-}  
+} 
+.category{
+  font-size: 2rem;
+  text-transform: capitalize;
+} 
   .container {
-    padding: 2px 16px;
+    padding: 1rem 4rem;
   }
-.informacion{
-    font-size: 12px;
+.information{
+    font-size: 1.2rem;
     display: flex;    
     flex-direction: column;
+    align-items: center; 
+    
 }
 
 img{
   width: 200px;
+  border-radius: 2.5rem;
+}
+
+.buttonDetail{
+  width:10rem;
+  border-radius: 2.5rem;
+  background-color: #BDE6F1;
+  margin-bottom: 2rem;
+}
+.buttonCart{
+  width:10rem;
+  border-radius: 2.5rem;
+  background-color:#FFE59D ;  
+}
+.price{
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
 

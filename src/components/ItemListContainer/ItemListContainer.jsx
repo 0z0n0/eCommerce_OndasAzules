@@ -1,25 +1,46 @@
 import './itemlistcontainer.css'
 import { useState, useEffect } from 'react'
-import { getProducts } from '../asyncmock'
+import { getProducts, getProductsByCategory } from '../asyncmock'
 import ItemList from '../ItemList/ItemList'
+import { useParams } from 'react-router-dom'
 
 const ItemListContainer = (props) => {
     const [products, setProducts] = useState([])
-
+    const [loading, setLoading] = useState(true)
+    const {categoryId} = useParams()
+    
+    
     useEffect(() => {
-        getProducts().then(response => {
-            setProducts(response)
-        })
-    }, [])
-
+        setLoading(true)
+        if(!categoryId){
+            getProducts().then(prods => {
+                setProducts(prods)
+            }).catch(error => {
+                console.log(error)
+            }).finally(() => {
+                setLoading(false)
+            })     
+        } else{
+            getProductsByCategory(categoryId).then(prods => {
+                setProducts(prods)
+            }).catch(error => {
+                console.log(error)
+            }).finally(() => {
+                setLoading(false)
+            })
+        }
+        
+    }, [categoryId])
+    if(loading) {
+        return <h1>Cargando...</h1>
+    }
     return (
-        <div className='contenedor' >
-            <h1 className='TituloPrincipal'>Colgantes</h1>
-            <div className='contenedorItem'>
-                <h2 className='TituloItem'>{props.greeting}</h2>
-                <ItemList products={products}/>
-            </div>
-            
+        <div>      
+            <h1>{props.greeting}</h1>
+            {products.length > 0 
+                ? <ItemList products={products}/>
+                : <h1>No hay productos</h1>
+            }         
         </div>
     )
 }

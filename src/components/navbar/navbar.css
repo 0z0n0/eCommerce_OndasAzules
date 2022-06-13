@@ -17,10 +17,6 @@ background: linear-gradient(35deg, rgba(189,230,241,1) 51%, rgba(255,229,157,1) 
     display: flex;
     align-items: center;
 }
-.titulo{
-    color: #7D1E6A;
-    padding: 0 5px;
-}
 .logo{
     height: 100px;
     width: auto;
@@ -28,21 +24,56 @@ background: linear-gradient(35deg, rgba(189,230,241,1) 51%, rgba(255,229,157,1) 
 }
 .navbar{
     display: flex;
-}
-.navbar ul{
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-}
-.navbar li{
-    margin: 0 10px;
-    list-style: none;
-}
-.navbar li a{
     text-decoration: none;
     color: #7D1E6A;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 600;    
+    list-style: none;    
 }
-.navbar li a:hover{
+.navbar :hover{
+    color: #7D1E6A;    
+}
+
+.Option {    
+    text-decoration: none;    
+    margin: 0 50px;    
+    width: auto;
+    padding: 12px;
+    font-size: .6em;   
+    flex: none;
+    display: flex;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline: inherit;
+}
+.ActiveOption {    
+    text-decoration: none;
+    border-radius: 25;
+    margin: 0 50px;    
+    width: auto;
+    padding: 12px;
+    font-size: .6em;
+    background: #EEB0B0;
+    border-radius: 8px;
+    flex: none;
+    display: flex;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     color: #7D1E6A;
-}
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+  }
+

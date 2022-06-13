@@ -6,6 +6,5 @@
 .row{
     display: flex;
     padding: 5px;
-    flex-wrap: wrap;
-    background-color: black;
+    flex-wrap: wrap;      
 }
