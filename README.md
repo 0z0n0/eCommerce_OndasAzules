@@ -17,3 +17,5 @@ Instalar dependencias
 
 Ejecutar el servidor de desarrollo
 
+###  `GIF `
+../public/assets/Ecommerce-AZ.gif
