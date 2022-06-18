@@ -1,0 +1,65 @@
+/*#7D1E6A Título
+  #EEB0B0 Destaques 2  
+  #FFE59D Destaques 1  
+  #BDE6F1 background   */
+.Counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    margin: auto;
+}
+
+.Controls {
+    display: flex;
+    justify-content: center;
+}
+
+.Button {
+    text-decoration: none;
+    border-radius: 25%;
+    margin: 0 3rem;
+    width: auto;
+    padding: 1rem;
+    font-size: 2rem;
+    background: #7D1E6A;
+    border-radius: 15%;
+    display: flex;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+    font-size: larger;
+}
+.ButtonCompra{
+    text-decoration: none;   
+    width: auto;
+    padding: 1rem;
+    font-size: 2rem;
+    background: #7D1E6A;   
+    display: flex;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;      
+}
+
+.Number {
+    font-size: 3rem;
+    padding: 1rem;
+    margin: 10px;    
+}
+

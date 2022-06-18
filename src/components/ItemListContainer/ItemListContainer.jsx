@@ -7,9 +7,20 @@ import { useParams } from 'react-router-dom'
 const ItemListContainer = (props) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
-    const {categoryId} = useParams()
+    const {categoryId} = useParams() // traemos el ID desde la url
     
-    
+    useEffect(() => {
+        const onRize = () => {
+            console.log('cambio de tamaño') 
+        }
+
+        window.addEventListener('resize', onRize) // hay que decirle qué tipo de evento y el nombre
+        return() => {
+            window.removeEventListener('resize', onRize)
+        }
+    },[])
+
+
     useEffect(() => {
         setLoading(true)
         if(!categoryId){
@@ -31,6 +42,7 @@ const ItemListContainer = (props) => {
         }
         
     }, [categoryId])
+
     if(loading) {
         return <h1>Cargando...</h1>
     }
@@ -44,17 +56,4 @@ const ItemListContainer = (props) => {
         </div>
     )
 }
-
-/* function Main() {
-    return (
-        <main className='mainContainer'>
-            <div className='FirstContainer'>
-                <p> Sitio en construcción</p>
-            </div>
-            <div class="preloader"></div>
-
-        </main>
-    )
-} */
-
 export default ItemListContainer

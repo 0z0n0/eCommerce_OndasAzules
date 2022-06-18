@@ -1,5 +1,6 @@
 import './navbar.css'
-import logo from './logo.png';
+import logo from './logo.png'
+import CartWidget from '../CartWidget/CartWidget'
 import { Link, NavLink } from 'react-router-dom'
 
 function Navbar() {
@@ -15,7 +16,8 @@ function Navbar() {
                     <NavLink to='/category/PortaSahumerio' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Porta Sahumerio</NavLink>
                     <NavLink to='/category/PortaLlaves' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Porta Llaves</NavLink>
                     <NavLink to='/category/PortaVelas' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Porta Velas</NavLink>                 
-                
+                    
+                    <CartWidget />
             </nav>
 
         </header>
