@@ -4,12 +4,15 @@ import { getProducts, getProductsByCategory } from '../asyncmock'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 
+import { getDocs, collection, query, where} from 'firebase/firestore'
+import { db } from '../../services/firebase'
+
 const ItemListContainer = (props) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     const {categoryId} = useParams() // traemos el ID desde la url
     
-    useEffect(() => {
+   /*  useEffect(() => {
         const onRize = () => {
             console.log('cambio de tamaño') 
         }
@@ -18,29 +21,27 @@ const ItemListContainer = (props) => {
         return() => {
             window.removeEventListener('resize', onRize)
         }
-    },[])
+    },[]) */
 
 
     useEffect(() => {
-        setLoading(true)
-        if(!categoryId){
-            getProducts().then(prods => {
-                setProducts(prods)
-            }).catch(error => {
-                console.log(error)
-            }).finally(() => {
-                setLoading(false)
-            })     
-        } else{
-            getProductsByCategory(categoryId).then(prods => {
-                setProducts(prods)
-            }).catch(error => {
-                console.log(error)
-            }).finally(() => {
-                setLoading(false)
+        setLoading(true)       
+
+        const collectionRef = categoryId ? ( 
+            query(collection(db, 'products'), where('category', '==', categoryId))
+        ) : ( collection(db, 'products') )
+
+        getDocs(collectionRef).then(response => {
+            console.log(response)
+            const productsFormatted = response.docs.map(doc => {
+                return { id: doc.id, ...doc.data() }
             })
-        }
-        
+            setProducts(productsFormatted)
+        }).catch(error => {
+            console.log(error)
+        }).finally(() => {
+            setLoading(false)
+        })        
     }, [categoryId])
 
     if(loading) {
